@@ -21,7 +21,7 @@
         <td><%= comment.created_at.strftime("%B, %d, %Y , %H:%M %p")%></td>
         <td><%= link_to 'Show', comment %></td>
         <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-        <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'There is no going back from this. Definitely, postitively, 100% sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
