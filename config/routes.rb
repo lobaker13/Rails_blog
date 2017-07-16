@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  root 'home#index'
-  get '/signin' => 'sigin#index'
+  root 'posts#index'
   get '/login' => 'signin#index'
   post '/login' => 'signin#login'
   get '/about', to: 'pages#about'

@@ -1,3 +1,4 @@
+<div id="main_content">
 <p id="notice"><%= notice %></p>
 
 <h1>Comments</h1>
@@ -18,7 +19,7 @@
         <td><%= comment.body %></td>
         <td><%= comment.user.full_name %></td>
         <td><%= comment.post.body %></td>
-        <td><%= comment.created_at.strftime("%B, %d, %Y , %H:%M %p")%></td>
+        <td><%= comment.created_at.strftime("%B %d at %r")%></td>
         <td><%= link_to 'Show', comment %></td>
         <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
         <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'There is no going back from this. Definitely, postitively, 100% sure?' } %></td>
@@ -30,3 +31,4 @@
 <br>
 
 <%= link_to 'New Comment', new_comment_path %>
+</div>

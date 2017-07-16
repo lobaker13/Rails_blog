@@ -19,12 +19,13 @@
           <td><%= post.title %></td>
           <td><%= post.body %></td>
           <td><%= post.user.full_name %></td>
-          <td><%= post.created_at.strftime("%B, %d, %Y , %H:%M")%></td>
+          <td><%= post.created_at.strftime("%B %d at %r")%></td>
           <td><%= link_to 'Show', post %></td>
           <td><%= link_to 'Edit', edit_post_path(post) %></td>
           <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
         <% end %>
+
       </tbody>
     </table>
 

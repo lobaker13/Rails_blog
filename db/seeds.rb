@@ -10,7 +10,8 @@
 User.create([
   {fname: 'Bob', lname: 'Smith', email: 'bob@aol.com', password: 'test'},
   {fname: 'Jenny', lname: 'Smythe', email: 'jenny@aol.com', password: 'test'},
-  {fname: 'Mark', lname: 'The_Shark', email: 'nick@aol.com', password: 'test'}
+  {fname: 'Mark', lname: 'The_Shark', email: 'nick@aol.com', password: 'test'},
+  {fname: 'Logan', lname: 'Baker', email: 'logan@aol.com', password: 'test'}
 ])
 
 Post.create([

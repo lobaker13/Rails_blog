@@ -1,12 +1,11 @@
 <div id="main_content">
-<h1>This is a Home Page marker so I dont get lost....</h1>
+<h1>This is a Home Page</h1>
 
-<%= flash[:notice] %>
 
 <% if @current_user%>
-  Welcome, <%= @current_user.full_name %>
   <nav>
     <li><%= link_to @current_user.fname, @current_user %></li>
+  </nav>
 <% else %>
 
 <%= form_tag login_path do %>
