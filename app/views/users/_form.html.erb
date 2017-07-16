@@ -14,25 +14,25 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :fname %>
+    <%= form.label :fname, "First Name"  %>
     <%= form.text_field :fname, id: :user_fname %>
   </div>
 
   <div class="field">
-    <%= form.label :lname %>
+    <%= form.label :lname, "Last Name" %>
     <%= form.text_field :lname, id: :user_lname %>
   </div>
 
   <div class="field">
-    <%= form.label :email %>
+    <%= form.label :email, "Email" %>
     <%= form.text_field :email, id: :user_email %>
   </div>
 
   <div class="field">
-    <%= form.label :password %>
-    <%= form.text_field :password, id: :user_password %>
+    <%= form.label :password, "Password" %>
+    <%= form.password_field :password, id: :user_password %>
   </div>
-
+<br>
   <div class="actions">
     <%= form.submit %>
   </div>

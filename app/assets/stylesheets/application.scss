@@ -1,18 +1,4 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+
 
  html, body {
  	font-family: 'Kite One', sans-serif;
@@ -43,6 +29,11 @@
  		left: 1em;
  		top: 1em;
  	  }
+    #icon
+      :hover{
+        cursor:none;
+      }
+
  	  ul {
  		list-style: none;
  		text-align: right;
@@ -60,13 +51,14 @@
  				text-decoration: none;
  				transition: all .6s ease;
  				&:hover {
- 					color: #f0810f;
+ 					color: #0ae496;
  				}
  			}
  		}
  		.active {
  			a {
- 				color: #33acb7;
+ 				color: #0ae496;
+        cursor: url("http://files.gamebanana.com/img/ico/games/banana.gif"), default;
  			}
  		}
  	}
@@ -82,14 +74,15 @@
  .button {
  	outline: none;
  	background: transparent;
+  cursor: url("http://files.gamebanana.com/img/ico/games/banana.gif"), default;
  	border: 1px solid #d6dce0;
  	padding: .5em 1.5em;
  	border-radius: 1.5em;
  	&:hover {
- 		border: 1px solid #33acb7;
- 		color: #33acb7;
+ 		border: 1px solid #0ae496;
+ 		color: #0ae496;
  		a {
- 			color: #33acb7 !important;
+ 			color: #0ae496;
  		}
  	}
  }
@@ -109,6 +102,7 @@
  		a {
  			color: #9eafba;
  			text-decoration: none;
+      cursor: url("http://files.gamebanana.com/img/ico/games/banana.gif"), default;
  		}
  		.buttons {
  			float: right;
@@ -119,7 +113,51 @@
  			}
  		}
  	}
- 	.post_wrapper {
+  table{
+    thead{}
+      tr{}
+        th{}
+  tbody{}
+    tr{}
+      td{
+        padding: 5px;
+      }
+        .title{
+          color: red;
+        }
+        .body{}
+        .time_stamp{}
+
+    tr{
+      #page_wrapper {
+     		padding: 3em;
+     		#content {
+     			h1 {
+     				font-weight: 500;
+     			}
+     			p {
+     				font-size: 1.1em;
+     				line-height: 1.75;
+     			}
+     			a {
+     				color: #33acb7;
+     				font-weight: 700;
+     				text-decoration: none;
+     			}
+     		}
+     	}
+    }
+
+    th{
+      padding:3px;
+    }
+    td{}
+
+
+
+  }
+
+  .post_wrapper {
  		padding: 3em;
  		border-bottom: 1px solid #d6dce0;
  		.title {
@@ -127,7 +165,7 @@
  			a {
  				font-weight: 500;
  				text-decoration: none;
- 				color: #2a2f35;
+ 				color: #276ec3;
  				font-size: 1.5em;
  				&:hover {
  					color: #33acb7;
@@ -135,97 +173,13 @@
  			}
  		}
  	}
- 	#post_content {
- 		padding: 1em 3em;
- 		.title {
- 			font-weight: 500;
- 			text-decoration: none;
- 			color: #2a2f35;
- 			font-size: 2.5em;
- 			margin-bottom: 0;
- 		}
- 		.body {
- 			font-size: 1.1em;
- 			line-height: 1.75;
- 		}
- 		.date_and_author {
- 			color: #9eafba;
- 			margin: .5em 0 2em 0;
- 		}
- 		#comments {
- 			h2 {
- 				margin: 3em 0 1em 0;
- 				border-bottom: 1px solid #d6dce0;
- 				padding-bottom: 0.5em;
- 			}
- 			h3 {
- 				margin-top: 2em;
- 			}
- 			.comment {
- 				border-bottom: 1px solid #d6dce0;
- 				padding: 1.5em 2em;
- 				.clear_both {
- 					clear: both;
- 				}
- 				&:after {
- 					clear: both;
- 				}
- 				.comment_content {
- 					float: left;
- 					.comment_name {
- 						margin: 1em 0 0 0;
- 						font-size: 0.7em;
- 						text-transform: uppercase;
- 					}
- 					.comment_body {
- 						font-size: 1.2em;
- 						margin: 0.2em 0 0 0;
- 					}
- 					.comment_time {
- 						margin-top: 1.2em;
- 						font-size: .8em;
- 					}
- 				}
- 				.button {
- 					float: right;
- 				}
- 			}
- 			input[type="text"], textarea {
- 				width: 50%;
- 			}
- 		}
  	}
- 	#page_wrapper {
- 		padding: 3em;
- 		#profile_image {
- 			width: 300px;
- 			float: left;
- 			margin-right: 2em;
- 			img {
- 				width: 100%;
- 				border-radius: 0.35em;
- 			}
- 		}
- 		#content {
- 			h1 {
- 				font-weight: 500;
- 			}
- 			p {
- 				font-size: 1.1em;
- 				line-height: 1.75;
- 			}
- 			a {
- 				color: #33acb7;
- 				font-weight: 700;
- 				text-decoration: none;
- 			}
- 		}
- 	}
+
  	.links {
  		margin: 2em 0;
  	}
  	input[type="text"], input[type="email"], input[type="password"], textarea {
- 		width: 90%;
+ 		width: 20%;
  		border: 1px solid #d6dce0;
  		border-radius: .35em;
  		margin-top: 10px;
@@ -251,4 +205,3 @@
  			color: #33acb7;
  		}
  	}
- }

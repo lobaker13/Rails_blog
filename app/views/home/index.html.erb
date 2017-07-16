@@ -1,17 +1,1 @@
-<div id="main_content">
-<h1>This is a Home Page</h1>
-
-
-<% if @current_user%>
-  <nav>
-    <li><%= link_to @current_user.fname, @current_user %></li>
-  </nav>
-<% else %>
-
-<%= form_tag login_path do %>
-<%= text_field_tag :email %>
-<%= password_field_tag :password %>
-<%= submit_tag 'Login' %>
-<% end %>
-<% end %>
-</div>
+<!-- Pretty sure this page is now useless -->

@@ -11,7 +11,7 @@
   <body>
    <div id="sidebar">
      <div id="icon">
-       <%= link_to root_path do %>
+       <%= link_to "http://www.fallingfalling.com/", target: :_blank do %>
         <%= image_tag "icon2.png" %>
        <% end %>
      </div>
@@ -49,9 +49,7 @@
 			<% end %>
 		</div>
 
-		<% flash.each do |name, msg| %>
-			<%= content_tag(:div, msg, class: "alert") %>
-		<% end %>
+
 	</div>
 <%= yield %>
 </body>
