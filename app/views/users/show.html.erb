@@ -1,12 +1,13 @@
+<div id="main_content">
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Fname:</strong>
+  <strong>First Name:</strong>
   <%= @user.fname %>
 </p>
 
 <p>
-  <strong>Lname:</strong>
+  <strong>Last Name:</strong>
   <%= @user.lname %>
 </p>
 
@@ -22,3 +23,4 @@
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+</div>

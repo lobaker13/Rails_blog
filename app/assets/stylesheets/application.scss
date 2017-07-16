@@ -14,8 +14,6 @@
  *= require_self
  */
 
- @import 'normalize';
-
  html, body {
  	font-family: 'Raleway', sans-serif;
  }
@@ -30,7 +28,7 @@
  }
 
  #sidebar {
- 	width: 350px;
+ 	width: 250px;
  	position: fixed;
  	left: 0;
  	top: 0;
@@ -96,13 +94,13 @@
  	}
  }
 
- .clearfix:after {
-    content: ".";
-    visibility: hidden;
-    display: block;
-    height: 0;
-    clear: both;
- }
+ // .clearfix:after {
+ //    content: ".";
+ //    visibility: hidden;
+ //    display: block;
+ //    height: 0;
+ //    clear: both;
+ // }
 
  #main_content {
  	margin-left: 250px;

@@ -3,7 +3,7 @@
   <head>
     <title>RailsBlog</title>
     <%= csrf_meta_tags %>
-    <%= favicon_link_tag 'favicon.png' %>
+    <%= favicon_link_tag 'favicon2.png' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -11,20 +11,21 @@
    <div id="sidebar">
      <div id="icon">
        <%= link_to root_path do %>
-        <%= image_tag "icon.png" %>
+        <%= image_tag "icon2.png" %>
        <% end %>
      </div>
     <ul>
      	<li class="category">Website</li>
-     	<li><%= link_to "Blog", root_path %></li>
+     	<li><%= link_to "Home", root_path %></li>
      	<li><%= link_to "About", about_path %></li>
+      <li><%= link_to "Logout", logout_path %></li>
     </ul>
 
      <ul>
        <li class="category">Social</li>
-       <li><a href="http://linkedin.com">LinkedIn</a></li>
-       <li><a href="http://github.com">Github</a></li>
-       <li><a href="http://facebook.com">Facebook</a></li>
+       <li><a target="_blank" href="http://linkedin.com">LinkedIn</a></li>
+       <li><a target="_blank" href="http://github.com">Github</a></li>
+       <li><a target="_blank" href="http://facebook.com">Facebook</a></li>
      </ul>
    </div>
 <%= yield %>
