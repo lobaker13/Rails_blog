@@ -1,215 +1,303 @@
+body,
+html {
+  font-family: 'Kite One', sans-serif;
+}
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
 
- html, body {
- 	font-family: 'Kite One', sans-serif;
- }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
- h1, h2, h3, h4, h5, h6 {
- 	font-weight: 500;
- }
+#sidebar {
+  width: 250px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: #A43820;
+  padding: 7em 0 0;
+  border-right: 1px solid #d6dce0;
 
- a {
- 	text-decoration: none;
- 	color: inherit;
- }
+  #icon {
+    width: 40px;
+    position: absolute;
+    left: 1em;
+    top: 1em;
+  }
 
- #sidebar {
- 	width: 250px;
- 	position: fixed;
- 	left: 0;
- 	top: 0;
- 	height: 100%;
- 	background: #A43820;
- 	padding: 7em 0 0 0;
- 	border-right: 1px solid #d6dce0;
+  #icon:hover {
+    cursor: none;
+  }
 
-    #icon {
- 		width: 40px;
- 		position: absolute;
- 		left: 1em;
- 		top: 1em;
- 	  }
-    #icon
-      :hover{
-        cursor:none;
+  ul {
+    list-style: none;
+    text-align: right;
+    padding-right: 3em;
+
+    .category {
+      font-weight: 700;
+      font-size: 0.8em;
+      text-transform: uppercase;
+      color: #14cabb;
+    }
+
+    li {
+      padding: 0.5em 0;
+
+      a {
+        color: #9eafba;
+        text-decoration: none;
+        transition: all 0.6s ease;
+
+        &:hover {
+          color: #0ae496;
+        }
       }
+    }
 
- 	  ul {
- 		list-style: none;
- 		text-align: right;
- 		padding-right: 3em;
- 		.category {
- 			font-weight: 700;
- 			font-size: 0.8em;
- 			text-transform: uppercase;
- 			color: #14cabb;
- 		}
- 		li {
- 			padding: .5em 0;
- 			a {
- 				color: #9eafba;
- 				text-decoration: none;
- 				transition: all .6s ease;
- 				&:hover {
- 					color: #0ae496;
- 				}
- 			}
- 		}
- 		.active {
- 			a {
- 				color: #0ae496;
+    .active {
+      a {
+        color: #0ae496;
         cursor: url("http://files.gamebanana.com/img/ico/games/banana.gif"), default;
- 			}
- 		}
- 	}
- 	.sign_in {
- 		position: absolute;
- 		right: 3em;
- 		top: 80%;
- 		font-size: .8em;
- 		color: #9eafba;
- 	}
- }
+      }
+    }
+  }
 
- .button {
- 	outline: none;
- 	background: transparent;
+  .sign_in {
+    position: absolute;
+    right: 3em;
+    top: 80%;
+    font-size: 0.8em;
+    color: #9eafba;
+  }
+}
+
+.button {
+  outline: none;
+  background: transparent;
   cursor: url("http://files.gamebanana.com/img/ico/games/banana.gif"), default;
- 	border: 1px solid #d6dce0;
- 	padding: .5em 1.5em;
- 	border-radius: 1.5em;
- 	&:hover {
- 		border: 1px solid #0ae496;
- 		color: #0ae496;
- 		a {
- 			color: #0ae496;
- 		}
- 	}
- }
+  border: 1px solid #d6dce0;
+  padding: 0.5em 1.5em;
+  border-radius: 1.5em;
 
+  &:hover {
+    border: 1px solid #0ae496;
+    color: #0ae496;
 
+    a {
+      color: #0ae496;
+    }
+  }
+}
+
+.clearfix:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
 // Need to push away from sidebar
- #main_content {
- 	margin-left: 250px;
- 	#header {
- 		padding: 1em 3em;
- 		border-bottom: 1px solid #d6dce0;
- 		background: #f5f7f9;
- 		color: #9eafba;
- 		p {
- 			display: inline;
- 		}
+#main_content {
+  margin-left: 250px;
+
+  #header {
+    padding: 1em 3em;
+    border-bottom: 1px solid #d6dce0;
+    background: #f5f7f9;
+    color: #9eafba;
+
+    p {
+      display: inline;
+    }
+
     h1 {
       font-family: 'Rock Salt';
       font-size: 22px;
-      position:fixed;
-      top: 0%;
+      position: fixed;
+      top: 0;
       right: 40%;
       color: #14cabb;
     }
- 		a {
- 			color: #9eafba;
- 			text-decoration: none;
+
+    a {
+      color: #9eafba;
+      text-decoration: none;
       cursor: url("http://files.gamebanana.com/img/ico/games/banana.gif"), default;
- 		}
- 		.buttons {
- 			float: right;
- 			margin-top: -6px;
- 			.button {
- 				font-size: .8em;
- 				margin-left: .5em;
- 			}
- 		}
- 	}
-  table{
-    thead{}
-      tr{}
-        th{}
-  tbody{}
-    tr{}
-      td{
-        padding: 5px;
+    }
+
+    .buttons {
+      float: right;
+      margin-top: -6px;
+
+      .button {
+        font-size: 0.8em;
+        margin-left: 0.5em;
       }
-        .title{
-          color: red;
-        }
-        .body{}
-        .time_stamp{}
-
-    tr{
-      #page_wrapper {
-     		padding: 3em;
-     		#content {
-     			h1 {
-     				font-weight: 500;
-     			}
-     			p {
-     				font-size: 1.1em;
-     				line-height: 1.75;
-     			}
-     			a {
-     				color: #33acb7;
-     				font-weight: 700;
-     				text-decoration: none;
-     			}
-     		}
-     	}
     }
-
-    th{
-      padding:3px;
-    }
-    td{}
-
-
-
   }
 
   .post_wrapper {
- 		padding: 3em;
- 		border-bottom: 1px solid #d6dce0;
- 		.title {
- 			margin: 0;
- 			a {
- 				font-weight: 500;
- 				text-decoration: none;
- 				color: #276ec3;
- 				font-size: 1.5em;
- 				&:hover {
- 					color: #33acb7;
- 				}
- 			}
- 		}
- 	}
- 	}
+    padding: 3em;
+    border-bottom: 1px solid #d6dce0;
 
- 	.links {
- 		margin: 2em 0;
- 	}
- 	input[type="text"], input[type="email"], input[type="password"], textarea {
- 		width: 20%;
- 		border: 1px solid #d6dce0;
- 		border-radius: .35em;
- 		margin-top: 10px;
- 		padding: .5em 1em;
- 		line-height: 1.75;
- 	}
- 	input[type="text"] {
- 		height: 35px;
- 	}
- 	textarea {
- 		min-height: 180px;
- 	}
- 	input[type="submit"] {
- 		outline: none;
- 		background: transparent;
- 		border: 1px solid #d6dce0;
- 		padding: .5em 1.5em;
- 		font-size: 1.1em;
- 		border-radius: 1.5em;
- 		margin-left: .5em;
- 		&:hover {
- 			border: 1px solid #33acb7;
- 			color: #33acb7;
- 		}
- 	}
+    .title {
+      margin: 0;
+
+      a {
+        font-weight: 500;
+        text-decoration: none;
+        color: #276ec3;
+        font-size: 1.5em;
+
+        &:hover {
+          color: #33acb7;
+        }
+      }
+    }
+  }
+
+  #post_content {
+    padding: 1em 3em;
+
+    .title {
+      font-weight: 500;
+      text-decoration: underline;
+      color: #2a2f35;
+      font-size: 2.5em;
+      margin-bottom: 0;
+    }
+
+    .body {
+      font-size: 2.1em;
+      line-height: 1.75;
+    }
+
+    .edit_delete {
+      padding-left: 5px;
+    }
+
+    a:hover {
+      color: #14cabb;
+    }
+
+
+    #comments {
+      h2 {
+        margin: 3em 0 1em;
+        border-bottom: 1px solid #d6dce0;
+        padding-bottom: 0.5em;
+      }
+
+      h3 {
+        margin-top: 2em;
+      }
+
+      .comment {
+        border-bottom: 1px solid #d6dce0;
+        padding: 1.5em 2em;
+
+        .clear_both {
+          clear: both;
+        }
+
+        &:after {
+          clear: both;
+        }
+
+        .comment_content {
+          float: left;
+
+          .comment_name {
+            margin: 1em 0 0;
+            font-size: 0.7em;
+            text-transform: uppercase;
+          }
+
+          .comment_body {
+            font-size: 1.2em;
+            margin: 0.2em 0 0;
+          }
+
+          .comment_time {
+            margin-top: 1.2em;
+            font-size: 0.8em;
+          }
+        }
+
+        .button {
+          float: right;
+        }
+      }
+    }
+
+    #page_wrapper {
+      padding: 3em;
+
+      #content {
+        h1 {
+          font-weight: 500;
+        }
+
+        p {
+          font-size: 1.1em;
+          line-height: 1.75;
+        }
+
+        a {
+          color: #33acb7;
+          font-weight: 700;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .links {
+    margin: 2em 0;
+  }
+
+  input[type="email"],
+  input[type="password"],
+  input[type="text"],
+  textarea {
+    width: 20%;
+    border: 1px solid #d6dce0;
+    border-radius: 0.35em;
+    margin-top: 10px;
+    padding: 0.5em 1em;
+    line-height: 1.75;
+  }
+
+  input[type="text"] {
+    height: 35px;
+  }
+
+  textarea {
+    min-height: 180px;
+  }
+
+  input[type="submit"] {
+    outline: none;
+    background: transparent;
+    border: 1px solid #d6dce0;
+    padding: 0.5em 1.5em;
+    font-size: 1.1em;
+    border-radius: 1.5em;
+    margin-left: 0.5em;
+
+    &:hover {
+      border: 1px solid #33acb7;
+      color: #33acb7;
+    }
+  }
+}

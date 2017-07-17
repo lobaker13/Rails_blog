@@ -1,39 +1,7 @@
-
-  <p id="notice"><%= notice %></p>
-
-  <h1>Posts</h1>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Body</th>
-        <th>Time Created</th>
-        <th colspan="4"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @posts.each do |post| %>
-        <tr>
-          <td class="title"><%= post.title %></td>
-          <td class="body"><%= post.body %></td>
-          <td class="time_stamp"><%= post.created_at.strftime("%B %d at %r")%></td>
-          <!-- checking to make sure User AND id are present. If user is not logged in, it wont throw an error -->
-          <% if @current_user && @current_user.id == post.user_id %>
-          <td><%= link_to 'Show', post %></td>
-          <td><%= link_to 'Comment', new_comment_path( post_id: post.id ) %></td>
-          <td><%= link_to 'Edit', edit_post_path(post) %></td>
-          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <% end %>
-        </tr>
-
-        <% end %>
-
-      </tbody>
-    </table>
-
-    <br>
-    <% if @current_user %>
-    <%= link_to 'New Post', new_post_path %>
-    <% end %>
+<p id="notice"><%= notice %></p>
+<% @posts.each do |post| %>
+  <div class="post_wrapper">
+    <h2 class="title"><%= link_to post.title, post %></h2>
+    <p class="date"><%= post.created_at.strftime("%B %d at %r")%>
+  </div>
+  <% end %>
