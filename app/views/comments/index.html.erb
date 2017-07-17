@@ -21,8 +21,10 @@
         <td><%= comment.post.body %></td>
         <td><%= comment.created_at.strftime("%B %d at %r")%></td>
         <td><%= link_to 'Show', comment %></td>
+        <% if @current_user && @current_user.id == comment.user_id %>
         <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
         <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'There is no going back from this. Definitely, postitively, 100% sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

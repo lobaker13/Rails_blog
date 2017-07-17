@@ -22,5 +22,6 @@ Post.create([
 
 Comment.create([
   {user_id: 1, post_id: 1, body: "Lame for a first post"},
-  {user_id: 3, post_id: 1, body: "I actually agree with Bob..."}
+  {user_id: 3, post_id: 1, body: "I actually agree with Bob..."},
+  {user_id: 4, post_id: 2, body: "Tell me about it"}
 ])

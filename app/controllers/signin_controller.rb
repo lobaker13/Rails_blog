@@ -7,7 +7,7 @@ class SigninController < ApplicationController
       redirect_to '/'
     else
       flash[:notice] = "We were unable to authenticate you"
-      redirect_to '/signin'
+      redirect_to '/login'
     end
   end
   def logout
