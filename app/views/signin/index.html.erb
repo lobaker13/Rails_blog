@@ -1,8 +1,7 @@
-<div id="main_content">
+
 <% if @current_user %>
 		<h1>Welcome, <%= @current_user.full_name %></h1>
 <% else %>
 <%= render 'form', notice: "Unable to login, please try again" %>
 
 <% end %>
-</div>

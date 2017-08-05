@@ -1,6 +1,7 @@
 body,
 html {
   font-family: 'Kite One', sans-serif;
+  background-color: #a1d6e2
 }
 
 h1,
@@ -71,14 +72,6 @@ a {
       }
     }
   }
-
-  .sign_in {
-    position: absolute;
-    right: 3em;
-    top: 80%;
-    font-size: 0.8em;
-    color: #9eafba;
-  }
 }
 
 .button {
@@ -110,6 +103,41 @@ a {
 #main_content {
   margin-left: 250px;
 
+  .signin {
+    position: absolute;
+    right: 3em;
+    top: 32%;
+    width: 45%;
+    font-size: 0.8em;
+    color: #a43820;
+  }
+  .new_comment{
+    margin-left:0%;
+  }
+    .actions{
+      margin-top: -1%;
+      margin-left: 3%;
+    }
+    h1, a{
+      margin-left: 1.5em;
+    }
+  .comment_content{
+    .comments_header {
+      text-decoration: overline;
+      margin-left: 9%;
+      margin-top: 10%;
+    }
+  }
+    .comment_body{
+      font-size: 0.8em;
+      margin-left: -3%;
+    }
+      .my_edit{
+        color:red;
+        margin-left: -2%;
+        margin-top: -2%;
+        font-size:0.5em;
+      }
   #header {
     padding: 1em 3em;
     border-bottom: 1px solid #d6dce0;
@@ -123,10 +151,10 @@ a {
     h1 {
       font-family: 'Rock Salt';
       font-size: 22px;
-      position: fixed;
-      top: 0;
-      right: 40%;
-      color: #14cabb;
+      position: absolute;
+      top: -4px;
+      right: 50%;
+      color: #a43820;
     }
 
     a {
@@ -134,14 +162,16 @@ a {
       text-decoration: none;
       cursor: url("http://files.gamebanana.com/img/ico/games/banana.gif"), default;
     }
-
+    .field{
+      float: right;
+    }
     .buttons {
       float: right;
       margin-top: -6px;
 
       .button {
         font-size: 0.8em;
-        margin-left: 0.5em;
+        margin-left: 2.5em;
       }
     }
   }
@@ -149,6 +179,7 @@ a {
   .post_wrapper {
     padding: 3em;
     border-bottom: 1px solid #d6dce0;
+    text-align: center;
 
     .title {
       margin: 0;
@@ -160,7 +191,7 @@ a {
         font-size: 1.5em;
 
         &:hover {
-          color: #33acb7;
+          color: #ffffff;
         }
       }
     }
@@ -183,61 +214,11 @@ a {
     }
 
     .edit_delete {
-      padding-left: 5px;
+      padding: 5px;
     }
 
     a:hover {
-      color: #14cabb;
-    }
-
-
-    #comments {
-      h2 {
-        margin: 3em 0 1em;
-        border-bottom: 1px solid #d6dce0;
-        padding-bottom: 0.5em;
-      }
-
-      h3 {
-        margin-top: 2em;
-      }
-
-      .comment {
-        border-bottom: 1px solid #d6dce0;
-        padding: 1.5em 2em;
-
-        .clear_both {
-          clear: both;
-        }
-
-        &:after {
-          clear: both;
-        }
-
-        .comment_content {
-          float: left;
-
-          .comment_name {
-            margin: 1em 0 0;
-            font-size: 0.7em;
-            text-transform: uppercase;
-          }
-
-          .comment_body {
-            font-size: 1.2em;
-            margin: 0.2em 0 0;
-          }
-
-          .comment_time {
-            margin-top: 1.2em;
-            font-size: 0.8em;
-          }
-        }
-
-        .button {
-          float: right;
-        }
-      }
+      color: #a43820;
     }
 
     #page_wrapper {
@@ -271,15 +252,18 @@ a {
   input[type="text"],
   textarea {
     width: 20%;
-    border: 1px solid #d6dce0;
+    border: 2px solid black;
     border-radius: 0.35em;
     margin-top: 10px;
     padding: 0.5em 1em;
     line-height: 1.75;
+    font-size: 1.5em;
   }
 
   input[type="text"] {
     height: 35px;
+    border: 2px solid black;
+    font-size: 1.5em;
   }
 
   textarea {
@@ -289,15 +273,15 @@ a {
   input[type="submit"] {
     outline: none;
     background: transparent;
-    border: 1px solid #d6dce0;
+    border: 1px solid #fff;
     padding: 0.5em 1.5em;
     font-size: 1.1em;
     border-radius: 1.5em;
-    margin-left: 0.5em;
+    margin-left: 3.5em;
 
     &:hover {
-      border: 1px solid #33acb7;
-      color: #33acb7;
+      border: 1px solid #fff;
+      color: #fff;
     }
   }
 }

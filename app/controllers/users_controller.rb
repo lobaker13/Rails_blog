@@ -56,7 +56,7 @@ class UsersController < ApplicationController
   # DELETE /users/1.json
   def destroy
     User.transaction do
-      @user.posts.each{ |post| post.comments.destroy_all }
+      # @user.posts.each{ |post| post.comments.destroy_all }
       @user.posts.destroy_all
       @user.comments.destroy_all
       @user.destroy

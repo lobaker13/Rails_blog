@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, :set_user, only: [:show, :edit, :update, :destroy]
   before_action :authenticate, except: [:index]
-  # GET /posts
-  # GET /posts.json
+
+
   def index
     @posts = Post.all.order('created_at DESC')
   end
@@ -25,7 +25,8 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
-
+    # Telling form to save post from calling the user id
+    @post.user_id = @current_user.id
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
@@ -62,9 +63,17 @@ class PostsController < ApplicationController
   end
 
   private
+
+  def destroy_comments
+    comments.destroy_all
+  end
     # Use callbacks to share common setup or constraints between actions.
     def set_post
       @post = Post.find(params[:id])
+    end
+
+    def set_user
+      @user = User.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

@@ -15,6 +15,7 @@
     <strong>Post:</strong>
     <%= @comment.post.body %>
   </p>
-
+ <% if @current_user && @current_user.id == @user.id %>
   <%= link_to 'Edit', edit_comment_path(@comment) %> |
   <%= link_to 'Back', comments_path %>
+<% end %>

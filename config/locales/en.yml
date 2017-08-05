@@ -29,5 +29,23 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
+fr:
+  errors:
+    format: "%{message}"
+  hello: "Bienvenue toute les monde"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              confirmation: "C'est ne pas vrais!, Encore une fois."
+  # activerecord:
+  #   attributes:
+  #     password: "Secret Password"
+  #   errors:
+  #     models:
+  #       user:
+  #         attributes:
+  #           password_confirmation:
+  #             blank: "don't match, ya dummy!"

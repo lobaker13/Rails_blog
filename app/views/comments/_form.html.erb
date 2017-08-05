@@ -1,4 +1,4 @@
-<div id="main_content">
+
 <%= form_with(model: comment, local: true) do |form| %>
   <% if comment.errors.any? %>
     <div id="error_explanation">
@@ -11,22 +11,19 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_field :body, id: :comment_body %>
-  </div>
+  <div class="new_comment">
+    <div class="field">
+      <%= form.label :body %>
+      <%= form.text_field :body, id: :comment_body %>
+    </div>
 
-  <!-- <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id, id: :comment_user_id %>
-  </div> -->
 
-  <div class="field">
-    <%= form.hidden_field :post_id, id: :comment_post_id %>
-  </div>
+    <div class="field">
+      <%= form.hidden_field :post_id, id: :comment_post_id %>
+    </div>
 <br>
-  <div class="actions">
+    <div class="actions">
     <%= form.submit %>
-  </div>
+    </div>
 <% end %>
-</div>
+  </div>

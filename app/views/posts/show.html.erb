@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <div id="post_content">
-  <h1 class="title"><%= @post.title %></h1>
+  <h2 class="title"><%= @post.title %></h2>
   <p class="date">
     Submitted
     <%= time_ago_in_words(@post.created_at)%>
@@ -9,12 +9,11 @@
     |
     <%= link_to 'Edit', edit_post_path(@post), :class => "edit_delete" %>
     |
-    <%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?' }, :class => "edit_delete" %>
+    <%= link_to 'Delete', @user, method: :delete, data: { confirm: 'Are you sure?' }, :class => "edit_delete" %>
     <% end %>
   </p>
-  <p class="body">Post:
-    <%= @post.body %></p>
-  <br>
+  <p class="body"> <br>
+    "<%= @post.body %>"</p>
   <h3 class="author">
     --
     <%= @post.user.full_name %>--</h3>
@@ -22,20 +21,21 @@
 
 <%= render 'comments/form', comment: Comment.new(post_id: @post.id) %>
 <% @post.comments.order( id: :desc ).each do |comment| %>
-<div class="comment clearfix">
   <div class="comment_content">
-    <p class="comment_body"><%= comment.body %></p>
+    <h1 class="comments_header"> Comment <h1>
+    <p class="comment_body">"<%= comment.body %>"</p>
     <% if @current_user && @current_user.id == comment.user_id %>
-    <em>Your comment:</em>
-    <a class="edit_delete" href="/comments/<%= comment.id %>/edit">Edit</a>
-    |
-    <%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' }, :class => "edit_delete" %>
+    <div class="my_edit">
+      <em>My comment: </em>
+      <a  href="/comments/<%= comment.id %>/edit">Edit</a>
+      |
+      <%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' }, :class => "edit_delete" %>
     <% elsif @current_user && @current_user.id == @post.user_id %>
-    <a href='/users/<%= comment.user_id %>'><%= comment.user.full_name %></a><br>
-    <%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' } %>
-  <% else %>
-    <a href='/users/<%= comment.user_id %>'><%= comment.user.full_name %></a>
-    <% end %>
-  </div>
+      <a href='/users/<%= comment.user_id %>'><%= comment.user.full_name %></a><br>
+      <%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' }, :class => "edit_delete" %>
+    <% else %>
+      <a href='/users/<%= comment.user_id %>'><%= comment.user.full_name %></a>
   <% end %>
+  </div>
 </div>
+  <% end %>

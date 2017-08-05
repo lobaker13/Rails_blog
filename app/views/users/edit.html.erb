@@ -1,8 +1,8 @@
-<div id= "main_content">
+ <% if @current_user && @current_user.id == @user.id %>
 <h1>Editing User</h1>
 
 <%= render 'form', user: @user %>
 
 <%= link_to 'Show', @user %> |
 <%= link_to 'Back', users_path %>
-</div>
+<% end %> 
