@@ -5,7 +5,7 @@
     Submitted
     <%= time_ago_in_words(@post.created_at)%>
     ago
-    <% if @current_user %>
+    <% if @current_user && @current_user.id == @user.id %>
     |
     <%= link_to 'Edit', edit_post_path(@post), :class => "edit_delete" %>
     |

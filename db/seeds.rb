@@ -19,7 +19,7 @@ User.create([
   {fname: 'Langston', lname: 'Hughes', email: 'Lhughes@test.com', password: 'test'},
   {fname: 'Raplh', lname: 'Emerson', email: 'Remerson@test.com', password: 'test'},
   {fname: 'Henry', lname: 'Thoreau', email: 'Hthoreau@test.com', password: 'test'},
-  {fname: 'T.S.', lname: 'Eliot', email: 'Teliot@test.com', password: 'test'},
+  {fname: 'T.S.', lname: 'Eliot', email: 'Teliot@test.com', password: 'test'}
 
 
 ])
@@ -37,8 +37,8 @@ Post.create([
   {user_id:10 , title: 'Accomplishment', body: 'To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.'},
   {user_id:11 , title: 'Castles', body: 'If you have built castles in the air, your work need not be lost; that is where they should be. Now put the foundations under them.'},
   {user_id:12 , title: 'Boundaries', body: 'Only those who will risk going too far can possibly find out how far one can go'},
-  {user_id:5, title: 'Love', body: 'We loved with a love that was more than love.'},
-  {user_id:1 , title: 'Self Preservation', body: 'To thine own self be true, and it must follow, as the night the day, thou canst not then be false to any man.'},
+  {user_id:5, title: 'Love', body: 'We loved with a love that was more than love.'}
+  # {user_id:1 , title: 'Self Preservation', body: 'To thine own self be true, and it must follow, as the night the day, thou canst not then be false to any man.'}
 ])
 
 Comment.create([
@@ -48,5 +48,5 @@ Comment.create([
   {user_id:5 , post_id:14 , body: "I wish I could write as mysterious as a cat."},
   {user_id:5 , post_id:12 , body: "I became insane, with long intervals of horrible sanity."},
   {user_id:10 , post_id:8 , body: "The only way to have a friend is to be one"},
-  {user_id:10 , post_id:6 , body: "Nothing can bring you peace but yourself."},
+  {user_id:10 , post_id:6 , body: "Nothing can bring you peace but yourself."}
 ])
